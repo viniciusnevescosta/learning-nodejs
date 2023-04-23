@@ -34,3 +34,5 @@ fs.readFile(
   "utf8",
   (error, data) => (error ? console.log(`Erro: ${error}`) : console.log(data))
 );
+
+// Obs: Cada um desses blocos de código precisam estar dentro de um único bloco, no caso, do 'writeFile', pois o Node é assíncrono.
