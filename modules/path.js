@@ -13,4 +13,4 @@ console.log(path.extname(__filename));
 console.log(path.parse(__filename));
 
 // adicionar caminhos a uma url de diretório
-console.log(path.join(__dirname, "oi", "pedro.html"));
+console.log(path.join(__dirname, "pasta_adicional", "arquivo.html"));
