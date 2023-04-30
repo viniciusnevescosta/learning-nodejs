@@ -11,19 +11,25 @@ app.get("/home", (req, res) => {
   res.status(200).send("<h1>Hello, Express!</h1>");
 });
 
-app.get("/users", (req, res) => {
-  const USERS = [
-    {
-      name: "teste",
-      email: "teste@gmail.com",
-    },
-    {
-      name: "teste2",
-      email: "teste2@gmail.com",
-    },
-  ];
+app.get("/users", async (req, res) => {
+  try {
+    const USERS = await USER_MODEL.find({});
+    res.status(201).json(USERS);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+});
 
-  res.status(200).json(USERS);
+app.get("/users/:id", async (req, res) => {
+  try {
+    const ID = req.params.id;
+
+    const USER = await USER_MODEL.findById(ID);
+
+    return res.status(200).json(USER)
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
 });
 
 app.post("/users", async (req, res) => {
@@ -31,7 +37,7 @@ app.post("/users", async (req, res) => {
     const USER = await USER_MODEL.create(req.body);
     res.status(201).json(USER);
   } catch (error) {
-    res.status(500).send(error.message);
+    return res.status(500).send(error.message);
   }
 });
 
