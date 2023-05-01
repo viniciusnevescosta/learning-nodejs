@@ -14,6 +14,7 @@ app.get("/home", (req, res) => {
 app.get("/users", async (req, res) => {
   try {
     const USERS = await USER_MODEL.find({});
+
     res.status(201).json(USERS);
   } catch (error) {
     return res.status(500).send(error.message);
@@ -26,7 +27,7 @@ app.get("/users/:id", async (req, res) => {
 
     const USER = await USER_MODEL.findById(ID);
 
-    return res.status(200).json(USER)
+    return res.status(200).json(USER);
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -35,7 +36,22 @@ app.get("/users/:id", async (req, res) => {
 app.post("/users", async (req, res) => {
   try {
     const USER = await USER_MODEL.create(req.body);
+
     res.status(201).json(USER);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+});
+
+app.patch("/users/:id", async (req, res) => {
+  try {
+    const ID = req.params.id;
+
+    const USER = await USER_MODEL.findByIdAndUpdate(ID, req.body, {
+      new: true,
+    });
+
+    res.status(200).json(USER);
   } catch (error) {
     return res.status(500).send(error.message);
   }
