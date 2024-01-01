@@ -4,8 +4,6 @@
 
 Welcome to the repository of my NodeJs learning project! Here, I explored the vast universe of NodeJs, creating a simple yet powerful user management application.
 
-- [Read in english](en_README.md)
-
 ## Summary of Contents
 
 - [Overview](#overview)
