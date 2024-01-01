@@ -48,7 +48,7 @@ Este projeto é parte da minha jornada de aprendizado, onde mergulhei no desenvo
 2. **Instale as Dependências:**
    ```bash
    cd learning-nodejs
-   npm install
+   pnpm i
    ```
 
 3. **Configure o Ambiente:**
@@ -60,7 +60,7 @@ Este projeto é parte da minha jornada de aprendizado, onde mergulhei no desenvo
 
 4. **Execute a Aplicação:**
    ```bash
-   npm start
+   pnpm start:dev
    ```
 
 5. **Explore a API:**
