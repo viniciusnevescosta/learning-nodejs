@@ -1,10 +1,22 @@
 # Learning NodeJs
 
+![image](https://github.com/viniciusnevescosta/learning-nodejs/assets/66970818/d88e6db5-1019-496c-a6f7-bd8ed0644d3f)
+
 Bem-vindo ao repositório do meu projeto de aprendizado em NodeJs! Aqui, explorei o vasto universo do NodeJs, criando uma aplicação simples, mas poderosa, de gerenciamento de usuários.
 
+- [Read in english](en_README.md)
+
+## Sumário de Conteúdos
+
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades](#funcionalidades)
+- [Como Testar](#como-testar)
+- [Aprendizados Adquiridos](#aprendizados-adquiridos)
+  
 ## Visão Geral
 
-Este projeto é parte da minha jornada de aprendizado, onde mergulhei no desenvolvimento web com NodeJs, MongoDB e Express. A proposta foi criar uma API CRUD para gerenciar usuários, introduzindo-me ao dinâmico mundo do "NodeVerse", onde até o banco de dados é uma parte ativa da narrativa.
+Este projeto é parte da minha jornada de aprendizado, onde mergulhei no desenvolvimento web com NodeJs, MongoDB e Express. A proposta foi criar uma API CRUD para gerenciar usuários.
 
 ## Tecnologias Utilizadas
 
@@ -40,7 +52,11 @@ Este projeto é parte da minha jornada de aprendizado, onde mergulhei no desenvo
    ```
 
 3. **Configure o Ambiente:**
-   - Crie um arquivo `.env` na raiz do projeto e forneça as variáveis de ambiente necessárias (por exemplo, conexão com o banco de dados).
+   - Crie um arquivo `.env` na raiz do projeto e forneça as variáveis de ambiente necessárias:<br><br>
+   ```env
+   MONGODB_USERNAME=seu_usuario_mongodb
+   MONGODB_PASSWORD=sua_senha_mongodb
+   ```
 
 4. **Execute a Aplicação:**
    ```bash
